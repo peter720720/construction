@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { LayoutDashboard, LogOut, HardHat, FileText, Calendar } from 'lucide-react';
 import axios from 'axios';
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+
 const UserDashboard = () => {
   const navigate = useNavigate();
   const [userName, setUserName] = useState('');
@@ -27,7 +29,7 @@ const UserDashboard = () => {
 
   const fetchAssignedProjects = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/projects');
+      const response = await axios.get(`${API_BASE}/api/projects`);
       if (response.data.status === 'success') {
         setProjects(response.data.data.projects);
       }

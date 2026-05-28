@@ -21,16 +21,19 @@ connectDB();
 app.use(helmet());
 
 // Dynamic CORS Engine Configurations
+const frontendUrls = process.env.FRONTEND_URL ? process.env.FRONTEND_URL.split(',').map(s => s.trim()).filter(Boolean) : [];
 const allowedOrigins = [
-  process.env.FRONTEND_URL, // Deployed domain (e.g., https://vercel.app)
-  'http://localhost:5173'   // Local client dev port
+  ...frontendUrls, // List of deployed frontend URLs (can be comma-separated in env)
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'http://127.0.0.1:5173'
 ];
 
-app.use(cors({
+const corsOptions = {
   origin: function (origin, callback) {
-    // Allow serverless utilities, api requests with no origin headers (e.g., Postman)
+    // Allow server-to-server or tools like Postman (no origin)
     if (!origin) return callback(null, true);
-    
+
     if (allowedOrigins.includes(origin)) {
       return callback(null, true);
     } else {
@@ -38,7 +41,14 @@ app.use(cors({
     }
   },
   credentials: true
-}));
+};
+
+// Allow an environment toggle to relax CORS during troubleshooting
+if (process.env.ALLOW_ALL_ORIGINS === 'true') {
+  app.use(cors({ origin: true, credentials: true }));
+} else {
+  app.use(cors(corsOptions));
+}
 
 app.use(express.json());
 app.use('/api', limiter); // Security: Protects endpoints against brute-force attacks

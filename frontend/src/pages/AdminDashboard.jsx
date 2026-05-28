@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Plus, Trash2, Loader2, Image, LogOut } from 'lucide-react';
 import axios from 'axios';
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [adminName, setAdminName] = useState('');
@@ -28,7 +30,7 @@ const AdminDashboard = () => {
 
   const fetchAdminProjects = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/projects');
+      const response = await axios.get(`${API_BASE}/api/projects`);
       if (response.data.status === 'success') setProjects(response.data.data.projects);
     } catch (err) {
       console.error(err.message);
@@ -50,7 +52,7 @@ const AdminDashboard = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5000/api/projects', data, {
+      const response = await axios.post(`${API_BASE}/api/projects`, data, {
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'multipart/form-data' }
       });
 
@@ -69,7 +71,7 @@ const AdminDashboard = () => {
     if (!window.confirm('Purge this project tracking node completely?')) return;
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/projects/${id}`, {
+      await axios.delete(`${API_BASE}/api/projects/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchAdminProjects();

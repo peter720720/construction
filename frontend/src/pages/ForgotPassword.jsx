@@ -11,8 +11,8 @@ const ForgotPassword = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  // Target endpoint configured explicitly for OTP dispatch execution
-  const API_URL = 'http://localhost:5000/api/auth/forgot-password';
+  // Target endpoint configured with environment base URL (falls back to localhost)
+  const API_URL = `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'}/api/auth/forgot-password`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

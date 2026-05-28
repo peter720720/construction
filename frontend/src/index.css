@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* 🚨 ADD THIS LINE RIGHT HERE FOR TAILWIND V4 MANUALLY TOGGLED DARK MODE */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-gold: #f59e0b;
+  --color-brand-dark-bg: #18181b;
+  --color-brand-light-bg: #f4f4f5;
+}
+
+/* Master Core Layout Structural Parameters */
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base structural setups */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

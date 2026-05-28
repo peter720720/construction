@@ -12,7 +12,7 @@ const UserSignup = () => {
   const [success, setSuccess] = useState('');
 
   // Universal backend base URL configuration target mapping
-  const API_URL = 'http://localhost:5000/api/auth/user-signup';
+  const API_URL = 'https://construction-m44o.onrender.com';
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

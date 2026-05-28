@@ -10,7 +10,8 @@ const Services = () => {
   useEffect(() => {
     const fetchPortfolios = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/projects');
+        // 🏗️ NATIVE VITE ENVIRONMENT VARIABLES ROUTER PIPELINE WITH PROJECTS PATH ATTACHED
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/projects`);
         if (response.data.status === 'success') {
           setProjects(response.data.data.projects);
         }
@@ -35,7 +36,7 @@ const Services = () => {
       icon: <BrickWall className="w-5 h-5"/>, 
       title: 'General Contracting', 
       desc: 'Erecting premium residential blocks and high-rise commercial structures.',
-      image: '/download.jpg' // 👈 Construction Site Overview asset
+      image: '/download.jpg' // Construction Site Overview asset
     },
     { 
       icon: <HardHat className="w-5 h-5"/>, 
@@ -76,7 +77,7 @@ const Services = () => {
               {/* Dynamic Image Router Box */}
               <div className="h-40 w-full overflow-hidden relative bg-zinc-200 dark:bg-zinc-800 border-b border-zinc-200 dark:border-zinc-800">
                 <img 
-                  src={srv.image} // 👈 Renders the unique string path from your array
+                  src={srv.image} 
                   alt={srv.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

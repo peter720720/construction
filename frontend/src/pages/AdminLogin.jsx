@@ -11,8 +11,8 @@ const AdminLogin = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  // Target endpoint configured explicitly for Administrative Clearance Profiles
-  const API_URL = 'http://localhost:5000/api/auth/admin-login';
+  // 🏗️ DYNAMICALLY INJECT YOUR LIVE RENDER BASE ENVIRONMENT URL VARIABLE HERE
+  const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/auth/admin-login`;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

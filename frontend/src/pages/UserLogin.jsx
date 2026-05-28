@@ -11,8 +11,8 @@ const UserLogin = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  // Target endpoint configured explicitly for standard user profiles
-  const API_URL = 'http://localhost:5000/api/auth/user-login';
+  // 🏗️ DYNAMICALLY INJECT YOUR LIVE RENDER BASE ENVIRONMENT URL VARIABLE HERE
+  const API_URL = `${import.meta.env.VITE_API_BASE_URL}/api/auth/user-login`;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

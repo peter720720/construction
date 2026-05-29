@@ -61,8 +61,8 @@ const Services = () => {
           <div className="inline-block px-3 py-1.5 bg-amber-500/10 text-amber-500 rounded-full font-bold text-[10px] uppercase tracking-widest mb-4">
             Our Core Competencies
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black uppercase tracking-tight mb-4">
-            Professional <span className="text-amber-500">Building Solutions</span>
+          <h1 className="text-4xl sm:text-5xl font-black leading-snug uppercase tracking-tight mb-4">
+            Professional <span className="text-amber-500">Building <br /> Solutions</span>
           </h1>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed">
             From pre-construction layout evaluations to commercial erections and premium architectural mockups, we coordinate every phase with expert precision.

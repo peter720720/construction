@@ -10,8 +10,8 @@ const Home = () => {
         <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-950 dark:text-white transition-colors duration-300">
 
             {/* 1. HERO CORE HERO CALLOUT BANNER SEGMENT */}
-            <section className="relative min-h-screen flex items-center justify-center px-4 pt-20 bg-gradient-to-b from-zinc-200 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 transition-all duration-300">
-                <div className="max-w-5xl mx-auto text-center space-y-6 z-10">
+            <section className="relative px-4 py-20 bg-gradient-to-b from-zinc-200 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 transition-all duration-300">
+                <div className="max-w-5xl mx-auto text-center space-y-6 z-10 mt-2 md:mt-0">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -26,7 +26,7 @@ const Home = () => {
                         initial={{ opacity: 0, y: 25 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.15 }}
-                        className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none text-zinc-950 dark:text-white"
+                        className="text-4xl sm:text-6xl lg:text-7xl leading-snug font-black uppercase tracking-tight leading-[0.85] sm:leading-[0.95] lg:leading-none text-zinc-950 dark:text-white"
                     >
                        WE BUILD <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600">LANDMARKS THAT LAST</span>

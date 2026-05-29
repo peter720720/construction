@@ -40,7 +40,7 @@ const Contact = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl sm:text-5xl font-black uppercase tracking-tight mb-4"
+            className="text-4xl sm:text-5xl font-black leading-snug uppercase tracking-tight mb-4"
           >
             Initialize Your <span className="text-amber-500">Building Blueprint</span>
           </motion.h1>

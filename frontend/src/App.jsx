@@ -25,7 +25,7 @@ function App() {
         <Navbar />
         
         {/* Master Active Content Route View Wrapper */}
-        <main className="flex-grow">
+        <main className="flex-grow pt-[84px] pb-24 lg:pt-20 lg:pb-0">
           <Routes>
             {/* Core Lowercase Public Corporate Showrooms */}
             <Route path="/" element={<Home />} />

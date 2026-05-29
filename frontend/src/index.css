@@ -22,3 +22,21 @@ html, body {
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .text-6xl {
+    font-size: 2.75rem;
+  }
+
+  .text-7xl {
+    font-size: 3.2rem;
+  }
+
+  .text-4xl {
+    font-size: 2rem;
+  }
+}

@@ -55,7 +55,7 @@ const Navbar = () => {
                 onClick={() => navigate('/user-login')}
                 className="hidden lg:inline-flex px-5 py-2.5 bg-zinc-950 dark:bg-zinc-100 hover:bg-amber-500 dark:hover:bg-amber-500 text-white dark:text-zinc-950 hover:text-zinc-950 font-bold text-xs uppercase tracking-wider rounded-lg transition-all duration-300 cursor-pointer"
               >
-                Portal Login
+                SIGN IN
               </button>
             </div>
 

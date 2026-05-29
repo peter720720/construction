@@ -54,9 +54,9 @@ const Contact = () => {
           {/* Corporate Operational Coordinates (Left Panel) */}
           <div className="lg:col-span-1 space-y-4">
             {[
-              { icon: <MapPin className="w-5 h-5" />, title: 'Headquarters Address', val: '123 Innovation Boulevard, Suite 500, Corporate Plaza' },
+              { icon: <MapPin className="w-5 h-5" />, title: 'Our Office', val: 'Ibadan, Oyo State, Nigeria' },
               { icon: <Phone className="w-5 h-5" />, title: 'Operational Hotline', val: '+1 (555) 019-2834' },
-              { icon: <Mail className="w-5 h-5" />, title: 'Electronic Mailbox', val: 'operations@titanconstruction.com' },
+              { icon: <Mail className="w-5 h-5" />, title: 'Electronic Mailbox', val: 'operations@A.ADEOYEconstruction.com' },
               { icon: <Clock className="w-5 h-5" />, title: 'Business Schedule', val: 'Mon - Fri: 08:00 AM - 06:00 PM' }
             ].map((item, idx) => (
               <div key={idx} className="p-5 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl flex items-start space-x-4">

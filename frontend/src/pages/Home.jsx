@@ -19,7 +19,7 @@ const Home = () => {
                         className="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/20 text-amber-500 font-black text-[10px] uppercase tracking-widest px-3 py-1.5 rounded-full"
                     >
                         <Building2 className="w-3.5 h-3.5" />
-                        <span>Enterprise Construction Engineering</span>
+                        <span>BUILDING THE FUTURE</span>
                     </motion.div>
 
                     <motion.h1
@@ -28,8 +28,8 @@ const Home = () => {
                         transition={{ duration: 0.6, delay: 0.15 }}
                         className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none text-zinc-950 dark:text-white"
                     >
-                        We Construct <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600">Elite Benchmarks</span>
+                       WE BUILD <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600">LANDMARKS THAT LAST</span>
                     </motion.h1>
 
                     <motion.p
@@ -38,7 +38,7 @@ const Home = () => {
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="max-w-2xl mx-auto text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-medium leading-relaxed"
                     >
-                        Delivering high-end architectural layouts, premium residential estates, and complex infrastructure developments matching corporate project scopes.
+                        “We deliver modern construction solutions designed with precision, durability, and excellence — creating structures that stand strong for generations.”
                     </motion.p>
 
                     <motion.div
@@ -51,7 +51,7 @@ const Home = () => {
                             onClick={() => navigate('/user-signup')}
                             className="px-8 py-4 bg-zinc-950 dark:bg-zinc-100 text-white dark:text-zinc-950 hover:bg-amber-500 dark:hover:bg-amber-500 hover:text-zinc-950 font-black text-xs uppercase tracking-widest rounded-xl transition-all duration-300 shadow-xl inline-flex items-center space-x-3 cursor-pointer"
                         >
-                            <span>Initialize Project Portal</span>
+                            <span>START YOUR PROJECT</span>
                             <ArrowRight className="w-4 h-4 text-amber-500" />
                         </button>
 
@@ -63,9 +63,9 @@ const Home = () => {
             <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
-                        { icon: <Shield className="w-6 h-6" />, title: 'Absolute Integrity', desc: 'Regulated structural compliance tracking nodes mapping global premium tolerances.' },
-                        { icon: <Hammer className="w-6 h-6" />, title: 'Advanced Methods', desc: 'Utilizing automated engineering layout platforms to scale project timelines efficiently.' },
-                        { icon: <Users className="w-6 h-6" />, title: 'Elite Grouping', desc: 'Coordinated by certified structural project managers and high-profile industry veterans.' }
+                        { icon: <Shield className="w-6 h-6" />, title: 'QUALITY ASSURANCE', desc: 'Every project undergoes rigorous quality inspections to ensure durability, safety, and compliance with industry standards..' },
+                        { icon: <Hammer className="w-6 h-6" />, title: 'PROJECT MANAGEMENT', desc: 'Our experienced project managers oversee planning, execution, and delivery to ensure projects stay on schedule and within budget.' },
+                        { icon: <Users className="w-6 h-6" />, title: 'SUSTAINABLE BUILDING', desc: 'We implement environmentally responsible construction practices and energy-efficient solutions for long-term value.' }
                     ].map((item, index) => (
                         <motion.div
                             key={item.title}

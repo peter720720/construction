@@ -22,11 +22,11 @@ const Footer = () => {
 
         {/* Operational Coordinates Column */}
         <div className="space-y-4">
-          <h3 className="text-white font-bold tracking-wide uppercase text-sm">Headquarters</h3>
+          <h3 className="text-white font-bold tracking-wide uppercase text-sm">OUR OFFICE</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start space-x-3">
               <MapPin className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-              <span>123 Innovation Boulevard, Suite 500, Corporate Plaza</span>
+              <span>Ibadan, Oyo State, Nigeria</span>
             </li>
             <li className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-amber-500 shrink-0" />
@@ -34,7 +34,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-amber-500 shrink-0" />
-              <span>operations@titanconstruction.com</span>
+              <span>operations@A.ADEOYEconstruction.com</span>
             </li>
           </ul>
         </div>
